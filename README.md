@@ -1,2 +1,2 @@
 # Login page
-**A demo login page with annimated background**
+*A demo login page with annimated background*
