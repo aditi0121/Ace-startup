@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>login form</title>
+  <style>
+     
+     
+
+      body{
+        margin:0px;
+      text-align:center;
+      background-color: rgba(32, 10, 235, 0.5);
+      color:white;
+      }
+
+      a{color:white;
+        text-decoration: none;
+      }
+      
+      #email{padding:10px;
+      margin:3px;
+      width:100%
+     
+      }
+      input{
+          border-style:none;
+          border-radius:8px;
+          box-shadow:0 0 .25em rgba(0,0,0,.25);
+      }
+      #pswd{padding:10px;
+      margin:3px;
+      width:100%
+      }
+    .forgot{
+        display:flex;
+    justify-content: space-between;
+    padding: 5px;
+       
+    }
+    .submit{
+        padding:10px;
+    }
+    
+    @media screen and (max-width:600px) {
+        .login{
+            padding:40px;
+            top:30%;
+    left:30%;
+    transform:translate(-25%,-25%);
+        }
+    }
+    @media screen and (min-width:600px) {
+        .login{
+            padding:75px;
+            top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+        }
+    }
+
+.login{
+    background-color:rgba(236, 76, 2, 0.8);
+    border-radius:175px;
+   
+    text-align: center;
+    position: fixed;
+    
+    z-index:1;
+    }
+    .slide{
+        animation:slide 5s ease-in-out  infinite alternate;
+        background-image:linear-gradient(-18deg, rgb(21, 10, 119) 65%, rgb(6, 190, 31) 35%);
+        z-index:-1;
+        position: fixed;
+        opacity:0.5;
+        left:-50%;
+        right:-50%;
+        top:0;
+        bottom:0%;
+    
+    }
+.slide1{
+    animation-direction:alternate-reverse;
+    animation-duration:6s;
+       
+}
+.slide2{
+    animation-duration: 7s;
+}
+@keyframes slide{
+    0%{transform:translateY(-25%);}
+    100%{transform:translateX(25%);}
+}
+
+      </style>
+</head>
+<body>
+<div class="slide"></div>
+<div class="slide slide1"></div>
+<div class="slide slide2"></div>
+<div class="login">
+    <h1>JGsofts!</h1>
+    <H2>sign in to your account</H2>
+<form>
+    <input type="text" id="email" name="email" placeholder="email" required="required"><br>
+    <input type="password" id="pswd" name="pswd" placeholder="password" required="required"><br>
+    <div class="forgot">
+    <label><input type="checkbox" name="Remember me" class="checkbox">Remember me</label>
+    <span class="pswd"><a href="#">Forgot password</a>
+    </div>
+    <input type="submit" value="login" class="submit"> 
+</form>
+</div>
+</body>
+</html>
